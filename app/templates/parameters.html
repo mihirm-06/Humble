@@ -36,38 +36,16 @@
             <div class="container px-4 px-lg-5 text-center">
                 <br>
                 <br>
-                <h1 class="mb-1 text-primary">THE MODEL</h1>
-                <h3 class="mb-5 text-dark"><em>Let's tweet like Donald Trump :P</em></h3>
+                <h1 class="mb-1 text-primary">Parameters</h1>
+                <p> GPT2 config: vocab_size=10000, max_length=32, dropout=0.0, n_embd=128, n_layer=3, n_head=3</p>
+                <p> Trained: num_steps=3000, learning_rate=1e-3, batch_size=4 </p>
+                <p> Generated: batch_size=4, max_length=100, temperature=1, top_p = 0.9</p>
+
             </div>
         </header>
         <!-- About-->
         <section class="content-section bg-primary" id="trythemodel">
-            <div class="container px-4 px-lg-5 text-center">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-5">
-                        <h2 class="text-light">Test out our model here!</h2>
-                        <p class="lead mb-5"><strong>Submit a sentence to start below, and the results will appear on the right!</strong></p>
-                        <form action="{{url_for('generate_text')}}" method="POST" source="custom" name="form-1" >
-                          <div class="form-group">
-                            <textarea class="form-control-lg" rows="4" cols="50" placeholder="Write your prompt here..." required="" id="text_gen_input" name="prompt"></textarea>
-                          </div>
-                          <div class="form-group">
-                            <button type="submit" class="btn btn-light" id="text_gen_button">Generate</button>
-                          </div>
-                        </form>
-                        <br>
-                    </div>
-                    <div class="col-lg-5">
-                      <h2 class="text-light">Results:</h2>
-                      <ul id="generated_ul">
-                      <p>
-                        {{ generated }}
-                        </p>
-                      <!-- generated items will be here. -->
-                      </ul>
-                    </div>
-                </div>
-            </div>
+            
         </section>
         <!-- Footer-->
         <footer class="footer text-center">
