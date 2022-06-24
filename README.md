@@ -3,8 +3,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="[images/logo.png](https://static.wixstatic.com/media/12b467_a4ceef0f338c41c7885cb083ea36a00f~mv2_d_1742_1743_s_2.png/v1/fill/w_216,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ai%20camp%20logo.png)" alt="Logo" width="80" height="80">
+  <a href="https://github.com/mihirm-06/humble">
+    <img src="https://static.wixstatic.com/media/12b467_a4ceef0f338c41c7885cb083ea36a00f~mv2_d_1742_1743_s_2.png/v1/fill/w_216,h_224,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ai%20camp%20logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Humble</h3>
@@ -35,7 +35,6 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -62,124 +61,113 @@
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
+* [Pandas](https://pandas.pydata.org)
+* [NumPy](https://numpy.org)
+* [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
+* [NLTK](https://www.nltk.org)
 * [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Flask](https://flask.palletsprojects.com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Due to some data constraints, the models must be retrained.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+Installing packages to train the models: 
+* nltk
   ```sh
-  npm install npm@latest -g
+  pip install --user -U nltk
+  ```
+* numpy
+  ```sh
+  pip install --user -U numpy
   ```
 
-### Installation
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Use as needed, to brighten your day or maybe dish out some comebacks (unlikely)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_Need help with something? Send me an email: pmf.tsuki@gmail.com_
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- Search: Generate multiple insults from different celebrities
+- History: View all generated insults _(not user-specific)_
+- Generate: Generate insults for a specific celebrity
+    - Generate a random insult
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/mihirm-06/humble/issues) for a full list of proposed features (and known issues).
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+This project definitely wouldn't have been possible without my teammates' help and our collective collaboration, so I'd like to give them a **huge** shoutout!
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b feature/AwesomeFeature`)
+3. Commit your Changes (`git commit -m 'Add some AwesomeFeature'`)
+4. Push to the Branch (`git push origin feature/AwesomeFeature`)
 5. Open a Pull Request
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the GNU GPLv3 License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Mihir Mankikar - [My Website (Coming Soon!)](https://theuselessweb.com) - pmf.tsuki@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/mihirm-06/humble](https://github.com/mihirm-06/humble)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+Thanks to my teammates! (I didn't do this alone :])
+* [Jason](https://github.com/Asonjay)
+* [Jun](https://github.com/jspEclipse)
+* [Jacq](https://github.com/PrincessRage13)
+* [Kennedy](https://github.com/melodyremix)
+* [Devin](https://github.com/MaroMashu)
+* [Sahasra](https://github.com/#)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+Special shoutout to [@Othneil Drew](https://github.com/othneildrew) for making [this awesome template](https://github.com/othneildrew/Best-README-Template)!
+
+<p align="right">[ <a href="#top">back to top</a> ]</p>
 
 
 
