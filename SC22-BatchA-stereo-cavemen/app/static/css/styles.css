@@ -1,0 +1,272 @@
+.models-bg
+{
+    /*background-image: url('https://i.ibb.co/tqM5FKD/model-bg.jpg') !important;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;*/
+    background-color: black;
+}
+
+
+/* NAVBAR STYLING [dont change] */
+
+.navbar-elements
+{
+    background: transparent;
+}
+
+.nav-link
+{
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF !important;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+  
+.nav-link:hover 
+{
+    opacity: 1;
+}
+
+.nav-link:before 
+{
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+}
+
+.nav-link-ltr:before 
+{
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover:before 
+{
+    width: 1em;
+}
+
+.nav-item:
+{
+    background-color: black;
+}
+
+
+/* END OF NAVBAR STYLING */
+
+/* Slideshow CSS */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* ===================================================================================================================
+ * ============
+ * MODELS STYLES
+ * ============
+ * ===================================================================================================================
+ */
+
+.models-bg
+{
+    background-color: #000 !important;
+}
+
+.homebg
+{
+    background-image: url('https://i.ibb.co/cNdms7Y/modelwp.jpg')
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.pfp
+{
+    width: 50vh;
+    height: auto;
+    border-radius: 25px;
+    background-image: url("https://media.wired.com/photos/5fa5c014d683a4ea1e288713/master/w_2240,c_limit/Culture_trump_socialmedia_1229490572.jpg");
+}
+
+.v-center
+{
+  z-index: -1;
+}
+
+button
+{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 25px;
+    border: none;
+}
+
+button:hover
+{
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: background-color 400ms
+}
+
+#form
+{
+    max-width: 440px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    background: #393939;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+textarea
+{
+    width: 400px;
+    height: 200px;
+    background-color:#393939;
+    border: none;
+    color: white;
+}
+
+textarea:focus
+{
+    background-color: #4e4e4e;
+    border: none;
+}
+
+.generate-btn
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    color: white;
+}
+
+.generate-btn:hover
+{
+    color: #999;
+}
+
+.separator
+{
+    display: flex;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.separator h2
+{
+    padding: 0 2rem; /* creates the space */
+}
+
+.separator .line
+{
+    flex: 1;
+    height: 3px;
+    background-color: #000;
+}
+
+input
+{
+    background: none;
+    text-decoration: none;
+    border: none;
+}

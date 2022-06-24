@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html style="background-color: #000 !important;">
+  <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdel<div style='text-align:center'></div>ivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='/css/styles.css') }}">
+      <link type="text/css" rel="stylesheet" href="../static/css/styles.css">
+  </head>
+  <style>
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    vertical-align: middle;
+  /*   horizontal-align: middle;
+    height: 720px;
+    width: 900px;
+    object-fit: contain; */
+  } 
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 14.20%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  </style>
+  <body style="background-color: #000 !important;">
+
+        <div class="container-fluid">
+        <!-- START OF NAVBAR -->
+        <nav class="navbar navbar-expand-sm navbar-dark">
+          <div class="container-fluid navbar-elements">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-menu">
+              <!-- Home -->
+              <li class="nav-item">
+                <a class="nav-link nav-link-ltr" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+              <!-- Insult me -->
+              <li class="nav-item dropdown">
+                <a class="nav-link nav-link-ltr dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Insult Me</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="{{url_for('models')}}">Models</a></li>
+                  <div><li><a class="dropdown-item" href="{{url_for('history')}}">Search Engine</a></li></div>
+                </ul>
+              </li>
+              <!-- Team -->
+              <li class="nav-item">
+                <a class="active nav-link nav-link-ltr" href= "{{url_for('teams')}}">Team</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+      </div>
+
+      <div class="container">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 7</div>
+            <img src="static/assets/team_photos/Jun Avatar 2.PNG" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 7</div>
+            <img src="static/assets/team_photos/Devin Avatar.jpg" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 7</div>
+            <img src="static/assets/team_photos/Sah Avatar.png" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 7</div>
+            <img src="static/assets/team_photos/Jacq Avatar.png" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 7</div>
+            <img src="static/assets/team_photos/Jun Avatar 2.PNG" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 7</div>
+            <img src="static/assets/team_photos/Mihir Avatar.jpg" style="width:100%" height="480">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 7</div>
+            <img src="static/assets/team_photos/Jason Avatar.png" style="width:100%" height="480">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Jun Avatar 2.PNG" style="width:100%" height="120"onclick="currentSlide(1)" alt="Jun Park Description:
+  Tired, help. Links: https://na.op.gg/summoners/na/jspEclipse
+  ">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Devin Avatar.jpg" style="width:100%" height="120" onclick="currentSlide(2)" alt="Devin Harris:  Where am I  ">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Sah Avatar.png" style="width:100%" height="120"onclick="currentSlide(3)" alt="Sahasra Boga:
+  I just want to be 5 again so I can sleep. And play. And eat. And sleep. (That sounds nice)">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Jacq Avatar.png" style="width:100%" width="250" height="120"onclick="currentSlide(4)" alt="Jacq Guiley: A ghost could be break-dancing right next to you and you would have no idea that it was happening; help.">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Jun Avatar 2.PNG" style="width:100%" height="120"onclick="currentSlide(5)" alt="Kennedy Washington: I own a business so go check that out ig (wow we love self promo)
+   https://aisle99studios.com/.">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Mihir Avatar.jpg" style="width:100%"  height="120"onclick="currentSlide(6)" alt="Mihir Mankikar: i love java i love java I LOVE JAVA. Links: https://github.com/mihirm-06">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="static/assets/team_photos/Jason Avatar.png" style="width:100%"  height="120"onclick="currentSlide(7)" alt="Jason Xu: Me serious gamer.">
+          </div>
+        </div>
+      </div>
+
+  <script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+
+  </body>
+</html>
+
