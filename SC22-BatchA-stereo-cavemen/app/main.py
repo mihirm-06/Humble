@@ -7,6 +7,7 @@ from aitextgen import *
 import json
 import string
 from random import randint
+import random
 #import nltk
 #from nltk.tokenize import word_tokenize as tw
 #nltk.download('punkt')
@@ -141,12 +142,17 @@ def generate_text():
                               min_length=10,
                               max_length=100,
                               temperature=1,
-                              top_p=3,
+                              top_p=0.9,
                               return_as_list=True)
     # Here
     
     result = fix_grammar(generated[0])
     gen_results.append(result)
+    
+    with open('history.txt', 'a+') as f:
+        f.write(result)
+        f.write('\n')
+    f.close()
     
     data = {'generated_1s' : result}
     session['data'] = result
@@ -155,25 +161,50 @@ def generate_text():
 # ### Kennedy/Jacq starts here
 @app.route(f'{base_url}/history/')
 def history():
+    if len(gen_results) > 0:
+        output = "<ol style= \"color: white; text-align: left;\">"
+        for sent in gen_results:
+            new_sent = "<li>" + sent + "</li>"
+            output += new_sent
+        output += "</ol>"
+    else:
+        output = None
+
     if 'find' in session:
         data = session['find']
+        print(data)
         if data != "N/A":
-            return render_template('history.html', generated = data)
+            random.shuffle(data)
+            history_data = "<ol style= \"color: white; text-align: left;\">"
+            for sent in data:
+                new_sent = "<li>" + sent + "\n"
+                history_data += new_sent
+            history_data += "</ol>"
+            return render_template('history.html', generated = history_data, history = output)
         else:
-            return render_template('history.html', generated = "<b>I couldn't find what you were looking for, DOOSHBAGGG<b>")
+            return render_template('history.html', generated = "<b>I couldn't find what you were looking for, DOOSHBAGGG</b>", history = output)
     else:
-        return render_template('history.html', generated = None)
+        return render_template('history.html', generated = None, history = output)
 
 @app.route(f'{base_url}/search', methods=["POST"])
 def search():
     keywords = request.form['prompt']
+    history_list = []
+    # Read stuff
+    with open('history.txt', 'r') as f:
+        history_list = f.readlines()
+    f.close()
+    # Find
     find = False
-    for sent in gen_results:
+    history_find = []
+    for sent in history_list:
         if str(keywords) in sent:
-            session['find'] = sent
+            history_find.append(sent)
             find = True
     if not find:
         session['find'] = "N/A"
+    else:
+        session['find'] = history_find
     return redirect(url_for('history'))
 
 if __name__ == '__main__':

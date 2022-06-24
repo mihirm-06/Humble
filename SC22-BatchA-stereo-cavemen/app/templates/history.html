@@ -41,7 +41,7 @@
     <!-- END OF NAVBAR -->
   <div class="container text-light">
       <h2 class="text-center">
-        Type Words in the Search Engine
+        Type Words in the Search Engine To Find Insults that Have those Words
       </h2>
             <!-- input tag -->
        <div class="my-4">
@@ -56,10 +56,18 @@
           <h2>
            Search Results:
          </h2>
-         <p>
-            {{generated}}
-         </p>
+         <h4>
+            {{generated|safe}}
+         </h4>
+            <br><br>
          </div>
+          <h2 style="color: white; text-transform: uppercase">History</h2>
+          <h4>
+            {{history|safe}}
+            <!--
+            generated = "<li> first sentence1 </li><li>second sentence</li>"
+            -->
+          </h4>
     </div>
 </body>
 </html>

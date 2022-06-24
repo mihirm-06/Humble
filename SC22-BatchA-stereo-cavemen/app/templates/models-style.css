@@ -1,0 +1,64 @@
+html, body
+{
+    background-color: #000 !important;
+}
+
+.navbar-elements
+{
+    background: transparent;
+}
+
+.nav-link 
+{
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFF !important;
+    padding: 20px 0px;
+    margin: 0px 20px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.75;
+}
+  
+.nav-link:hover 
+{
+    opacity: 1;
+}
+
+.nav-link:before 
+{
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #FFF;
+}
+
+.nav-link-ltr:before 
+{
+    width: 0%;
+    bottom: 10px;
+}
+
+.nav-link-ltr:hover:before 
+{
+    width: 1em;
+}
+
+.pfp
+{
+    width: 50%;
+    height: auto;
+    border-radius: 25px;
+    object-position: center;
+}
+
+.v-center
+{
+  margin: 0;
+  position: absolute;
+  top: 17vh;
+  transform: -50vh;
+}
