@@ -13,9 +13,7 @@
     Insult generator developed at AI Camp in 2022 Batch A EST NLP Summer Session. Trained with aitextgen on GPT-2 124M.
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://youtu.be/DzrT3VD3o4U">Watch the demo!</a>
   </p>
 </div>
 
