@@ -144,7 +144,7 @@ Distributed under the GNU GPLv3 License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Mihir Mankikar - [My Website (Coming Soon!)](https://theuselessweb.com) - pmf.tsuki@gmail.com
+My Email: pmf.tsuki@gmail.com
 
 Project Link: [https://github.com/mihirm-06/humble](https://github.com/mihirm-06/humble)
 
